@@ -9,6 +9,7 @@ const pokeBall=[{
     "mobilidade":3,
     "pontuacao":2,
     "apoio":2,
+    "url":"../assets/stat-darkrai.png"
 },
 
 {
@@ -22,6 +23,7 @@ const pokeBall=[{
     "mobilidade":3.5,
     "pontuacao":1,
     "apoio":1,
+    "url":"../assets/stat-mimikyu.png"
 },
 
 {
@@ -35,16 +37,30 @@ const pokeBall=[{
     "mobilidade":3,
     "pontuacao":2,
     "apoio":3,
+    "url":"../assets/stat-mew.png"
 }
 
 ]
 
-// console.log(pokeBall[1])
+{/* <div class="card" style="width: 18rem;">
+<img src="/assets/stat-mimikyu.png" class="card-img-top" alt="...">
+<div class="card-body">
+  <h5 class="card-title">Nome</h5>
+  <a href="#" class="btn btn-primary">Go somewhere</a>
+</div>
+</div> */}
 
-var lista=document.getElementById("lista")
+const cards=document.querySelector("#cards");
 
-for (var i=0;i<pokeBall.length;i++){
+console.log(cards)
 
-    lista.innerHTML+=`<li> ${pokeBall[i].nome} ${pokeBall[i].descricao} </li>`
+for (var i=0; i<pokeBall.length;i++){
 
+    cards.innerHTML+= `<div class="card" style="width: 18rem;">
+    <img src= ${pokeBall[i].url} class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Nome</h5>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    </div> `
 }
